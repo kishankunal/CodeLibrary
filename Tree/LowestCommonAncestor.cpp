@@ -17,7 +17,7 @@ treeNode* lowestCommonAncestor(treeNode* root, treeNode *a, treeNode* b){
         return right;
     }
     else if(!right){
-        return right;
+        return left;
     }
     else{//here lies the result
         return root;
