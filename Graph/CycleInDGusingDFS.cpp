@@ -1,42 +1,46 @@
+//https://www.interviewbit.com/problems/cycle-in-directed-graph/
+
 #include<bits/stdc++.h>
 using namespace std;
 
 
-bool dfs(vector<int> graph[], bool *visited, bool *dfsVisited, int start){
-    visited[start] = true;
-    dfsVisited[start] = true;
-    for(auto i : graph[start]){
-        if(!visited[i]){
-            if(dfs(graph, visited, dfsVisited, i)){
-                return true;
-            }
-        }
-        else if(dfsVisited[start]){
-            return true;
-        }
-    }
-    dfsVisited[start] = false;
-    return false;
-}
 
-bool isCycle(int n, vector<vector<int> > &b){
+bool dfs(int start, vector<int> graph[], bool *visited, bool *dfsvisited){
+     visited[start] = true;
+     dfsvisited[start] = true;
+     for(int x : graph[start]){
+         if(!visited[x]){
+             if(dfs(x, graph, visited, dfsvisited)){
+                 return true;
+             }
+         }
+         else if(dfsvisited[x]){
+             return true;
+         }
+     }
+     dfsvisited[start] = false;
+     return false;
+ }
+
+
+int solve(int n, vector<vector<int> > &b) {
     vector<int> graph[n+1];
-    for(int i = 0; i<b.size(); i++){
+    int m = b.size();
+    for(int i = 0; i<m; i++){
         graph[b[i][0]].push_back(b[i][1]);
-        graph[b[i][1]].push_back(b[i][0]);
     }
-    bool *visited = new bool(n);
-    bool *dfsVisited = new bool(n);
-    for(int i = 0; i<n; i++){
+    bool visited[n+1];
+    bool dfsvisited[n+1];
+    for(int i = 0; i<=n; i++){
         visited[i] = false;
-        dfsVisited[i] = false;
+        dfsvisited[i] = false;
     }
-    for(int i = 0; i<n; i++){
+    for(int i = 1; i<=n; i++){
         if(!visited[i]){
-            if(dfs(graph, visited, dfsVisited, i)){
-                return true;
+            if(dfs(i, graph, visited, dfsvisited)){
+                return 1;
             }
         }
     }
-    return false;
+    return 0;
 }
