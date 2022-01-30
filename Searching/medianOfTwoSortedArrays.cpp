@@ -1,7 +1,7 @@
 //https://leetcode.com/problems/median-of-two-sorted-arrays/submissions/
 #include<bits/stdc++.h>
 using namespace std;
-//time complexity is O(min(m, n))
+//time complexity is O(log(min(m, n)))
 
 class Solution {
 public:

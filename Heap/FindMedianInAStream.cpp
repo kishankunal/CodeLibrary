@@ -13,12 +13,6 @@ class Solution
     		max.push(x);
     	else if (x > max.top()) 
     		min.push(x);
-    	// else if(min.empty())
-    	// {
-    	// 	min.push(max.top());
-    	// 	max.pop();
-    	// 	max.push(x);
-    	// }
     	else
     		max.push(x);
     		
