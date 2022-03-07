@@ -40,10 +40,6 @@ int snakeLadder(vector<vector<int>> &A, vector<vector<int>> &B)
                 else if (t + d <= 100 and snack[t + d] and !vis[t + d])
                 {
                     vis[t + d] = true;
-                    if (snack[t + d] == 100)
-                    {
-                        found = true;
-                    }
                     q.push(snack[t + d]);
                 }
                 else if (t + d <= 100 and !snack[t + d] and !ladder[t + d] and !vis[t + d])

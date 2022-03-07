@@ -13,7 +13,7 @@ int maxSumSubarray(int A[], int n)
     {
         temp += arr[i];
         sum = max(temp, sum)
-            forward[i] = sum;
+        forward[i] = sum;
         if (temp < 0)
         {
             temp = 0;

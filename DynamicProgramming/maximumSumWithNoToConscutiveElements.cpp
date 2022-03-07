@@ -20,7 +20,7 @@ int maximumSum(int *arr, int n, int *dp){
 
 int maxSum(int *arr, int sum){
     int prev_prev = arr[0];
-    int prev = max(arr[0]. arr[1]);
+    int prev = max(arr[0], arr[1]);
     int res = prev;
     for(int i = 2; i<n; i++){
         res = max(prev, prev_prev + arr[i]);

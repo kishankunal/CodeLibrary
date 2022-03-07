@@ -8,6 +8,7 @@ void swap(int *a, int *b)
     *a = *b;
     *b = temp;
 }
+
 void binSort(int arr[], int n)
 {
     int low = -1;

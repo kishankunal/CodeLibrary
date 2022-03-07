@@ -16,7 +16,7 @@ ListNode *detectCycle(ListNode *A)
     ListNode *slow = A;
     ListNode *fast = A;
     bool flag = false;
-    while (slow && fast && fast->next)
+    while (fast && fast->next)
     {
         slow = slow->next;
         fast = fast->next->next;

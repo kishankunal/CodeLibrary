@@ -41,7 +41,6 @@ vector<int> distanceK(TreeNode* root, int B, int C) {
     queue<TreeNode *> q;
     map<TreeNode *, TreeNode *> parent;
     root = fillParent(root, parent, B, A);
-
     unordered_map<TreeNode *, bool> visited;
     visited[root] = true;
     q.push(root);

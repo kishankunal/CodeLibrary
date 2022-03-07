@@ -17,7 +17,7 @@ vector<int> inorder(TreeNode* root){
     vector<int> inorder;
     TreeNode *curr = root;
     while(curr){
-        if(!curr->left){
+        if(!curr->left){ 
             inorder.push_back(curr->val);
             curr = curr->right;
         }

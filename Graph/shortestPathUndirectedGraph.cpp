@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//unweighted graph
 void bfs(int *dist, vector<vector<int>> &graph, int start)
 {
     queue<int> q;

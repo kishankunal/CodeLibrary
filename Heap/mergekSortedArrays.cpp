@@ -21,7 +21,7 @@ vector<int> mergeKArrays(vector<vector<int>> arr, int k)
         pair<int, int> top = pq.top();
         pq.pop();
         ans.push_back(top.first);
-        if(index[top.second] < arr[top.second].size()-1){
+        if(index[top.second] < k-1{
             ++index[top.second];
             pq.push({arr[top.second][index[top.second]], top.second});
         }

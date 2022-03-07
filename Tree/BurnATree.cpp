@@ -27,7 +27,6 @@ TreeNode *fillParent(TreeNode *root, unordered_map<TreeNode* , TreeNode*> &paren
              parent[top->right] = top;
          }
      }
-     
      return A;
  }
 int solve(TreeNode* root, int B) {

@@ -18,7 +18,6 @@ void bfs(int start, bool *visited, vector<int> &ans, vector<int> adj[]){
             }
         }
     }
-    
 }
 
 vector<int>bfsOfGraph(int V, vector<int> adj[]){

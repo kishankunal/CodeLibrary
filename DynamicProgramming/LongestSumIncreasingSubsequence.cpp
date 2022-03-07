@@ -12,6 +12,7 @@ int longestSumIncreasingSubsequence(int arr[], int n){
     int *ls = new int(n);
     ls[0] = arr[0];
     for(int i = 1; i<n; i++){
+        lis[i] = arr[i];
         for(int j = 0; j<i; j++){
             if(arr[i] > arr[j])  
                 ls[i] = maxm(ls[i], (ls[j] + arr[i]));

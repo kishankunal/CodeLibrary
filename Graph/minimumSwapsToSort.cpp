@@ -3,7 +3,6 @@
 using namespace std;
 
 int minSwaps(int A[], int N){
-    /*Your code here */
     pair<int,int> arr[N];
     for(int i=0;i<N;i++){
         arr[i].first = A[i];

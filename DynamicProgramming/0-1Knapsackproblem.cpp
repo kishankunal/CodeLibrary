@@ -26,5 +26,5 @@ int maxValue(int w, int *wt, int *val, int n, int **dp){
                dp[i][j] = -1;
            }
        }
-        return maxValue(w, wt, val, n, dp);
+        return maxValue(w, wt, val, n, dp); 
     }

@@ -9,7 +9,6 @@ long long maximumSum(int arr[], int n)
     for (int i = 0; i < n; i++)
     {
         temp = temp + arr[i];
-        cout << temp << " ";
         ans = max(ans, temp);
         if (temp < 0)
         {

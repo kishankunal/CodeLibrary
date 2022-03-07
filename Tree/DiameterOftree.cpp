@@ -15,6 +15,6 @@ int maxDepth(treeNode* root, int maxm){
     }
     int lh = maxDepth(root->left, maxm);
     int rh =  maxDepth(root->right, maxm);
-    maxm =1+  max(maxm, lh+rh);
+    maxm = 1 +  max(maxm, lh+rh);
     return 1 + max(lh,rh);
 }
